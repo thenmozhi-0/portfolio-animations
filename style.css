@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: #0f1724;
+    color: #e6eef8;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+/* Navbar */
+header {
+    background: rgba(10, 20, 30, 0.6);
+    backdrop-filter: blur(6px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 32px;
+    color: white;
+}
+.logo {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 18px;
+}
+nav ul li a {
+    color: #cfe8ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Sections */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 14px;
+}
+h2 span {
+    color: #7ee3ff;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background: linear-gradient(90deg,#ff7a7a,#ffb86b);
+    color: #061224;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    margin-top: 12px;
+    box-shadow: 0 6px 18px rgba(255,120,120,0.12);
+}
+
+/* Projects */
+.project-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.project-card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    padding: 28px;
+    width: 220px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(2,6,23,0.6);
+    transition: transform 0.35s, box-shadow 0.35s;
+    backdrop-filter: blur(4px);
+    text-align: center;
+}
+.project-card small { color: #9fb7d2; font-weight:600; }
+.project-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0px 18px 40px rgba(2,6,23,0.8);
+}
+
+/* Home Background Canvas */
+#bg-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.home-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.home-section .content {
+    z-index: 1;
+    color: white;
+    max-width: 900px;
+    padding: 24px;
+    text-align: center;
+}
+p { opacity: 0.95; color: #cfe8ff; }
+
+/* Responsive */
+@media (max-width: 700px) {
+    .project-list { gap: 12px; }
+    nav { padding: 12px 18px; }
+    h2 { font-size: 1.6rem; }
+}
